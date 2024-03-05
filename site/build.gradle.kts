@@ -40,7 +40,10 @@ kotlin {
             
         }
         jvmMain.dependencies {
-            compileOnly(libs.kobweb.api) // Provided by Kobweb backend at runtime
+            compileOnly(libs.kobweb.api)
+            implementation(libs.crypto.tink)
+            implementation(libs.mongodb.kotlin.driver)// Provided by Kobweb backend at runtime
         }
+
     }
 }
